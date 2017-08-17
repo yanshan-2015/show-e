@@ -71,6 +71,13 @@ module.exports = {
                     limit: 1048576,
                     name: '[path][name].[ext]'
                 }
+            },
+            {
+                test: require.resolve('jquery'),
+                loader: 'expose-loader?$expose-loader?jQuery'
+            },{
+                test: require.resolve('tether'),
+                loader: 'expose-loader?tether'
             }
         ]
     },

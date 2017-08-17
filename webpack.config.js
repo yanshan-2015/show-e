@@ -20,11 +20,6 @@ module.exports = {
         contentBase: __dirname +'/src',
         port: 3000,
     },
-    resolve: {
-        alias: {
-            'jquery': __dirname +'/src/js/lib/jquery-1.11.3.min.js',
-        }
-    },
     module: {
         loaders:[
             {
@@ -73,7 +68,7 @@ module.exports = {
             $: "jquery",
             jQuery: "jquery",
             "window.jQuery": "jquery",
-            Swiper: 'swiper'
+
         }),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.optimize.CommonsChunkPlugin({
@@ -85,7 +80,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'views/index.html',
             template: 'views/index.html',
-            chunks: ['index','vendor'], 
+            chunks: ['index','vendor']
         }),
         new OpenBrowserPlugin({
             url: 'http://localhost:3000/views/index.html'
