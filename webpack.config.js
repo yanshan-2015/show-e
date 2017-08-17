@@ -55,6 +55,9 @@ module.exports = {
             },{
                 test: require.resolve('tether'),
                 loader: 'expose-loader?tether'
+            },{
+                test: require.resolve('d3'),
+                loader: 'expose-loader?d3'
             }
         ]
     },
@@ -68,7 +71,7 @@ module.exports = {
             $: "jquery",
             jQuery: "jquery",
             "window.jQuery": "jquery",
-
+            d: 'd3'
         }),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.optimize.CommonsChunkPlugin({
