@@ -50,10 +50,10 @@ module.exports = {
                 }),
             },
             {
-                test: /\.scss$/,
+                test: /\.less$/,
                 loader: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
-                    use: ['css-loader','sass-loader','px2rem-loader']
+                    use: ['css-loader','less-loader','px2rem-loader']
                 }),
             },
             {

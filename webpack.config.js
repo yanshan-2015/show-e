@@ -40,7 +40,7 @@ module.exports = {
                 loader: 'style-loader!css-loader!'
             },{
                 test: /\.scss$/,
-                loader: 'style-loader!css-loader!sass-loader!px2rem-loader?remUnit=75&remPrecision=8'
+                loader: 'style-loader!css-loader!less-loader!px2rem-loader?remUnit=75&remPrecision=8'
             }, {
                 test:/\.(png|jpg)$/,
                 loader: 'url-loader',
@@ -71,7 +71,7 @@ module.exports = {
             $: "jquery",
             jQuery: "jquery",
             "window.jQuery": "jquery",
-            d: 'd3'
+            dd: 'd3'
         }),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.optimize.CommonsChunkPlugin({
